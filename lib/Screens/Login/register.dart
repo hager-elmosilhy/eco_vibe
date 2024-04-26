@@ -1,4 +1,5 @@
 import 'package:eco_vibe/Screens/Login/Widgets/coustom_container.dart';
+import 'package:eco_vibe/Screens/Login/login.dart';
 import 'package:eco_vibe/Screens/Login/sign_up.dart';
 import 'package:eco_vibe/Widgets/app_name.dart';
 import 'package:eco_vibe/Widgets/coustom_divider.dart';
@@ -80,7 +81,7 @@ class RegisterScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (BuildContext context) => const SignUpScreen(),
+                        builder: (BuildContext context) => const LoginScreen(),
                       ),
                     );
                   },

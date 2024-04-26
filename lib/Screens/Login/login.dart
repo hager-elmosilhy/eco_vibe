@@ -3,6 +3,7 @@ import 'package:eco_vibe/Screens/Login/Widgets/AuthTextFieldWidget.dart';
 import 'package:eco_vibe/Screens/Login/Widgets/AuthTextWidget.dart';
 import 'package:eco_vibe/Screens/Login/Widgets/auth_textButton_widget.dart';
 import 'package:eco_vibe/Screens/Login/Widgets/coustom_continue.dart';
+import 'package:eco_vibe/Screens/Login/sign_up.dart';
 import 'package:eco_vibe/Widgets/app_name.dart';
 import 'package:eco_vibe/Widgets/coustom_divider.dart';
 import 'package:flutter/material.dart';
@@ -92,17 +93,21 @@ class _LoginScreenState extends State<LoginScreen> {
                   const SizedBox(
                     height: 20,
                   ),
-                   CoustomContinue(image: 'assets/google 1.png',
-                    text: 'Continue with Google',),
-                    const SizedBox(
+                  CoustomContinue(
+                    image: 'assets/google 1.png',
+                    text: 'Continue with Google',
+                  ),
+                  const SizedBox(
                     height: 20,
                   ),
-                    CoustomContinue(image: 'assets/apple 1.png',
-                    text: 'Continue with Apple',),
-                    const SizedBox(
+                  CoustomContinue(
+                    image: 'assets/apple 1.png',
+                    text: 'Continue with Apple',
+                  ),
+                  const SizedBox(
                     height: 20,
                   ),
-                  const Row(
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       AuthTextWidget(
@@ -115,6 +120,15 @@ class _LoginScreenState extends State<LoginScreen> {
                         text: 'Sign Up',
                         color: Color(0xff00994C),
                         size: 18,
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  const SignUpScreen(),
+                            ),
+                          );
+                        },
                       ),
                     ],
                   ),

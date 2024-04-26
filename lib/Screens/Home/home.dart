@@ -24,7 +24,7 @@ class HomeScreen extends StatelessWidget {
             Coustom_Text(
               text: 'Be Part of the change',
             ),
-             FristContainer(),
+            FristContainer(),
             Coustom_Text(
               text: 'Services',
             ),
@@ -44,34 +44,63 @@ class HomeScreen extends StatelessWidget {
             Coustom_Text(
               text: 'Special Offers',
             ),
-
-            /* ListView(
-              physics: const ScrollPhysics(),
-              shrinkWrap: true,
-              scrollDirection: Axis.horizontal,
-              children: const [
-                ItemList(),
-                ItemList(),
-                ItemList(),
-              ],
-            ),*/
-            /* Expanded(
-              child: GridView.builder(
-                scrollDirection: Axis.horizontal,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                ),
-                itemCount: 2,
-                itemBuilder: (BuildContext context, int index) => ItemList(),
-              ),
-            ),*/
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  Image.asset('assets/Rectangle 44.png',scale:3.5,),
-                  const SizedBox(height: 5,),
-                  Image.asset('assets/Rectangle 45.png',scale:3.5 ,),
+                  Image.asset(
+                    'assets/Rectangle 44.png',
+                    scale: 3.5,
+                  ),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  Image.asset(
+                    'assets/Rectangle 45.png',
+                    scale: 3.5,
+                  ),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  Image.asset(
+                    'assets/Rectangle 44.png',
+                    scale: 3.5,
+                  ),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  Image.asset(
+                    'assets/Rectangle 45.png',
+                    scale: 3.5,
+                  ),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  Image.asset(
+                    'assets/Rectangle 44.png',
+                    scale: 3.5,
+                  ),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  Image.asset(
+                    'assets/Rectangle 45.png',
+                    scale: 3.5,
+                  ),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  Image.asset(
+                    'assets/Rectangle 44.png',
+                    scale: 3.5,
+                  ),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  Image.asset(
+                    'assets/Rectangle 45.png',
+                    scale: 3.5,
+                  ),
                 ],
               ),
             ),

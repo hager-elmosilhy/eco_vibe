@@ -11,45 +11,44 @@ class AboutScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          leading: Padding(
-            padding: const EdgeInsets.only(left: 10.0),
-            child: IconButton(
-                onPressed: () {
-                  Navigator.pop(
-                    context,
-                  );
-                },
-                icon: Image.asset(
-                  'assets/arrow_circle_left 2.png',
-                  scale: 3.5,
-                )),
-          ),
-          title: const Center(
-            child: Text(
-              'About Us',
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-            ),
+          leading: IconButton(
+              onPressed: () {
+                Navigator.pop(
+                  context,
+                );
+              },
+              icon: Image.asset(
+                'assets/arrow_circle_left 2.png',
+                scale: 3.5,
+              )),
+              titleSpacing: 100,
+          title: Text(
+            textAlign: TextAlign.center,
+            'About Us',
+            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
           ),
         ),
-
         body: Padding(
           padding: const EdgeInsets.all(25),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
-
             children: [
-
               Center(
                 child: nameApp(
                   scale: 6.5,
                 ),
               ),
-              const SizedBox(height: 25,),
+              const SizedBox(
+                height: 25,
+              ),
               const Text(
                 "Creating a sustainable eCommerce website involves various strategies to minimize environmental impact Firstly, opt for green hosting services  that use renewable energy sources.Secondly, focus on efficient web design by using clean, lightweight code and optimizing images. Thirdly, offer eco-friendly products  and encourage minimal packaging. Additionally, consider implementing a carbon offsetting program and providing educational content on sustainability. Collaborating with sustainable brands can also enhance your website's eco-friendly appeal and attract environmentally conscious consumers.",
-                maxLines: 15,style: TextStyle(fontSize: 18),
+                maxLines: 15,
+                style: TextStyle(fontSize: 18),
               ),
-              const SizedBox(height: 30,),
+              const SizedBox(
+                height: 30,
+              ),
               Container(
                 height: 70,
                 width: double.infinity,
@@ -61,8 +60,14 @@ class AboutScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                  RowItems(image: 'assets/call.png', text: 'Contact Us',color: Colors.white, ontap: () {  },),
-                ],),
+                    RowItems(
+                      image: 'assets/call.png',
+                      text: 'Contact Us',
+                      color: Colors.white,
+                      ontap: () {},
+                    ),
+                  ],
+                ),
               ),
             ],
           ),

@@ -92,17 +92,21 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   const SizedBox(
                     height: 20,
                   ),
-                   CoustomContinue(image: 'assets/google 1.png',
-                    text: 'Continue with Google',),
-                    const SizedBox(
+                  CoustomContinue(
+                    image: 'assets/google 1.png',
+                    text: 'Continue with Google',
+                  ),
+                  const SizedBox(
                     height: 20,
                   ),
-                    CoustomContinue(image: 'assets/apple 1.png',
-                    text: 'Continue with Apple',),
-                    const SizedBox(
+                  CoustomContinue(
+                    image: 'assets/apple 1.png',
+                    text: 'Continue with Apple',
+                  ),
+                  const SizedBox(
                     height: 20,
                   ),
-                  const Row(
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       AuthTextWidget(
@@ -115,6 +119,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         text: 'Log In',
                         color: Color(0xff00994C),
                         size: 18,
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  const LoginScreen(),
+                            ),
+                          );
+                        },
                       ),
                     ],
                   ),

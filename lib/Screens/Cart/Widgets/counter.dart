@@ -55,6 +55,9 @@ class _CounterState extends State<Counter> {
               onPressed: () {
                 setState(() {
                   counter--;
+                  if(counter < 0) {
+                    counter = 0 ;
+                  }
                 });
               },
               icon: const Icon(Icons.remove),

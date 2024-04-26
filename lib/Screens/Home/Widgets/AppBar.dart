@@ -90,7 +90,7 @@ class AppBarWidget extends StatelessWidget {
                               const SearchScreen()));
               },
               child: Search(
-                text: 'Search for services',
+
               ),
             ),
           ],

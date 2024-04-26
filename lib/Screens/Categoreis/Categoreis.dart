@@ -17,7 +17,7 @@ class CategoryScreen extends StatelessWidget {
               text: 'Categoreis'
             ),
             const SizedBox(
-              height: 40,
+              height: 60,
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -53,7 +53,7 @@ class CategoryScreen extends StatelessWidget {
               ],
             ),
             const SizedBox(
-              height: 40,
+              height: 60,
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -80,7 +80,7 @@ class CategoryScreen extends StatelessWidget {
               ],
             ),
             const SizedBox(
-              height: 40,
+              height: 60,
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,

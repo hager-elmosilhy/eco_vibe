@@ -1,16 +1,23 @@
 import 'package:eco_vibe/Screens/Login/Widgets/AuthTextWidget.dart';
 import 'package:flutter/material.dart';
 
+
 class AuthTextButtonWidget extends StatelessWidget {
   final String text;
     final double size;
 
-  const AuthTextButtonWidget({super.key, required this.text, this.color, required this.size});
+   AuthTextButtonWidget({super.key,
+    required this.text,
+    this.color,
+    required this.size,
+    required this.onPressed});
+
   final Color? color;
+  final VoidCallback onPressed;
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {},
+      onPressed: onPressed,
       style: TextButton.styleFrom(
         alignment: Alignment.topRight,
       ),

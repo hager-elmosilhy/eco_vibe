@@ -18,11 +18,7 @@ class ProfileScreen extends StatelessWidget {
             children: [
               profileAppBar(
                 text: 'Profile',
-                  Widget:
-                  IconButton(onPressed: (){},
-                      icon: Image.asset(
-                    'assets/edit.png',
-                    scale: 4,))),
+               ),
               const SizedBox(
                 height: 15,
               ),

@@ -18,7 +18,7 @@ class ItemsScreen extends StatelessWidget {
             children: [
               AppBarWidget(
                 widget: Search(
-                  text: 'Search for Products',),),
+                  ),),
                Padding(
                 padding: const EdgeInsets.only(left: 8,right: 8,top: 8),
                 child: GridView.builder(
