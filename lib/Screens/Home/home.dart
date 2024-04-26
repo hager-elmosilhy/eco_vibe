@@ -1,6 +1,6 @@
 import 'package:eco_vibe/Screens/Home/Widgets/AppBar.dart';
 import 'package:eco_vibe/Screens/Home/Widgets/Item_List.dart';
-import 'package:eco_vibe/Screens/Home/Widgets/coustom_text.dart';
+import 'package:eco_vibe/Widgets/coustom_text.dart';
 import 'package:eco_vibe/Screens/Home/Widgets/first_container.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +24,7 @@ class HomeScreen extends StatelessWidget {
             Coustom_Text(
               text: 'Be Part of the change',
             ),
-            const FristContainer(),
+             FristContainer(),
             Coustom_Text(
               text: 'Services',
             ),

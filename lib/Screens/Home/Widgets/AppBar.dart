@@ -1,3 +1,5 @@
+import 'package:eco_vibe/Screens/Profile/Notification.dart';
+import 'package:eco_vibe/Screens/Profile/profile.dart';
 import 'package:eco_vibe/Screens/Search/Search.dart';
 import 'package:eco_vibe/Widgets/search_widget.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +16,7 @@ class AppBarWidget extends StatelessWidget {
         Container(
           height: 181,
           width: double.infinity,
+
           decoration: const BoxDecoration(
             color: Color(0xff00994C),
           ),
@@ -51,16 +54,29 @@ class AppBarWidget extends StatelessWidget {
                   const SizedBox(
                     width: 25,
                   ),
-                  Image.asset(
-                    'assets/notifications.png',
-                    scale: 3,
+                  InkWell(
+                    onTap: ()
+    { Navigator.push(context,
+    MaterialPageRoute(builder:
+    (context) =>NotificationScreen()));
+  },
+                    child: Image.asset(
+                      'assets/notifications.png',
+                      scale: 3,
+                    ),
                   ),
                   const SizedBox(
                     width: 10,
                   ),
-                  Image.asset(
-                    'assets/profile.png',
-                    scale: 3,
+                  InkWell(
+                    onTap: (){ Navigator.push(context,
+                        MaterialPageRoute(builder:
+                            (context) =>ProfileScreen()));
+                    },
+                    child: Image.asset(
+                      'assets/profile.png',
+                      scale: 3,
+                    ),
                   ),
                 ],
               ),
@@ -70,9 +86,10 @@ class AppBarWidget extends StatelessWidget {
                  Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const SearchScreen()));
+                              builder: (context) =>
+                              const SearchScreen()));
               },
-              child: SearchWidget(
+              child: Search(
                 text: 'Search for services',
               ),
             ),

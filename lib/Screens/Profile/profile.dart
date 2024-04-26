@@ -1,4 +1,4 @@
-import 'package:eco_vibe/Screens/Notification/Notification.dart';
+import 'package:eco_vibe/Screens/Profile/Notification.dart';
 import 'package:eco_vibe/Screens/Profile/Widgets/Row_Items.dart';
 import 'package:eco_vibe/Screens/Profile/Widgets/app_bar.dart';
 import 'package:eco_vibe/Screens/Profile/Widgets/coustom_container.dart';
@@ -16,7 +16,13 @@ class ProfileScreen extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              AppBarProfle(),
+              profileAppBar(
+                text: 'Profile',
+                  Widget:
+                  IconButton(onPressed: (){},
+                      icon: Image.asset(
+                    'assets/edit.png',
+                    scale: 4,))),
               const SizedBox(
                 height: 15,
               ),

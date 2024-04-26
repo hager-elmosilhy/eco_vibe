@@ -1,4 +1,5 @@
 import 'package:eco_vibe/Screens/Profile/Widgets/Row_Items.dart';
+import 'package:eco_vibe/Screens/Profile/Widgets/app_bar.dart';
 import 'package:eco_vibe/Widgets/app_name.dart';
 import 'package:flutter/material.dart';
 
@@ -30,13 +31,16 @@ class AboutScreen extends StatelessWidget {
             ),
           ),
         ),
+
         body: Padding(
           padding: const EdgeInsets.all(25),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
+
             children: [
+
               Center(
-                child: AppNameTextWidget(
+                child: nameApp(
                   scale: 6.5,
                 ),
               ),

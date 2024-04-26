@@ -17,7 +17,7 @@ class ItemsScreen extends StatelessWidget {
           child: Column(
             children: [
               AppBarWidget(
-                widget: SearchWidget(
+                widget: Search(
                   text: 'Search for Products',),),
                Padding(
                 padding: const EdgeInsets.only(left: 8,right: 8,top: 8),
@@ -31,7 +31,7 @@ class ItemsScreen extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                   builder: (context) => const DetailsScreen()));},
-                    child: const CoustomItems()), 
+                    child:  items()),
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,mainAxisSpacing: 5,crossAxisSpacing: 5),),
                     

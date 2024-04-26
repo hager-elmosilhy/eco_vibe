@@ -21,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   _goNext(){
     Navigator.push(context,
-      MaterialPageRoute(builder: (context) => const RegisterScreen()),);  }
+      MaterialPageRoute(builder: (context) =>const Center(child:  RegisterScreen())),);  }
 
   @override
   void initState(){
@@ -36,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
         alignment: AlignmentDirectional.center,
         children: [
           const BackgroundImage(),
-          AppNameTextWidget(scale: 4,),
+          nameApp(scale: 4,),
         ],
       ),
     );

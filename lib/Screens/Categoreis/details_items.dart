@@ -1,3 +1,4 @@
+import 'package:eco_vibe/Screens/Cart/cart.dart';
 import 'package:eco_vibe/Screens/Categoreis/Widgets/details_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:rate/rate.dart';
@@ -11,7 +12,7 @@ class DetailsScreen extends StatelessWidget {
       child: Scaffold(
         body: Column(
           children: [
-            const DetailsAppBar(),
+             appbarDetails(),
             Padding(
               padding: const EdgeInsets.all(16),
               child: Column(
@@ -67,16 +68,22 @@ class DetailsScreen extends StatelessWidget {
                       const SizedBox(
                         width: 160,
                       ),
-                      Container(
-                        height: 40,
-                        width: 170,
-                        decoration: BoxDecoration(
-                            color: const Color(0xff00994C),
-                            borderRadius: BorderRadius.circular(10)),
-                        child: const Center(
-                          child: Text(
-                            'Add Cart',
-                            style: TextStyle(color: Colors.white, fontSize: 20),
+                      InkWell(
+                        onTap: (){ Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const CartScreen()));},
+                        child: Container(
+                          height: 40,
+                          width: 170,
+                          decoration: BoxDecoration(
+                              color: const Color(0xff00994C),
+                              borderRadius: BorderRadius.circular(10)),
+                          child: const Center(
+                            child: Text(
+                              'Add Cart',
+                              style: TextStyle(color: Colors.white, fontSize: 20),
+                            ),
                           ),
                         ),
                       ),

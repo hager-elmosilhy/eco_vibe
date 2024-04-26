@@ -29,7 +29,8 @@ class _BottomScreenState extends State<BottomScreen> {
               currentIndex = index;
             });
           },
-          selectedIconTheme: const IconThemeData(color: Color(0xff00994C) ),
+          selectedIconTheme: const IconThemeData(
+              color: Color(0xff00994C) ),
           //showSelectedLabels: true,
           selectedItemColor: const Color(0xff00994C),
           items: [

@@ -1,4 +1,4 @@
-import 'package:eco_vibe/Screens/Categoreis/Widgets/coustom_coulmn.dart';
+import 'package:eco_vibe/Screens/Categoreis/Widgets/category_widget.dart';
 import 'package:eco_vibe/Screens/Categoreis/items.dart';
 import 'package:eco_vibe/Widgets/coustom_app_bar.dart';
 import 'package:flutter/material.dart';
@@ -13,15 +13,8 @@ class CategoryScreen extends StatelessWidget {
         backgroundColor: const Color(0xffEBEBEB),
         body: Column(
           children: [
-            CoustomAppBar(
-              widget: const Text(
-                'Categoreis',
-                style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
+            coustomAppBar(
+              text: 'Categoreis'
             ),
             const SizedBox(
               height: 40,
@@ -30,14 +23,14 @@ class CategoryScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CoustomColumn(
+                categoryApp(
                   text: 'Furniture',
                   image: 'assets/Furniture.png',
                 ),
                 const SizedBox(
                   width: 20,
                 ),
-                CoustomColumn(
+                categoryApp(
                   text: 'Clothes',
                   image: 'assets/Clothes.png',
                 ),
@@ -52,7 +45,7 @@ class CategoryScreen extends StatelessWidget {
                           builder: (context) => const ItemsScreen()),
                     );
                   },
-                  child: CoustomColumn(
+                  child: categoryApp(
                     text: 'Self Care',
                     image: 'assets/Self Care.png',
                   ),
@@ -66,21 +59,21 @@ class CategoryScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CoustomColumn(
+                categoryApp(
                   text: 'Gifts',
                   image: 'assets/Gifts.png',
                 ),
                 const SizedBox(
                   width: 20,
                 ),
-                CoustomColumn(
+                categoryApp(
                   text: 'Food',
                   image: 'assets/Food.png',
                 ),
                 const SizedBox(
                   width: 20,
                 ),
-                CoustomColumn(
+                categoryApp(
                   text: 'Paper tools',
                   image: 'assets/Paper tools.png',
                 ),
@@ -93,21 +86,21 @@ class CategoryScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CoustomColumn(
+                categoryApp(
                   text: 'Recycable',
                   image: 'assets/Recycable.png',
                 ),
                 const SizedBox(
                   width: 20,
                 ),
-                CoustomColumn(
+                categoryApp(
                   text: 'Education',
                   image: 'assets/Education.png',
                 ),
                 const SizedBox(
                   width: 20,
                 ),
-                CoustomColumn(
+                categoryApp(
                   text: 'Health',
                   image: 'assets/Health.png',
                 ),

@@ -12,7 +12,7 @@ class SearchScreen extends StatelessWidget {
         body: Column(
           children: [
             AppBarWidget(
-              widget: SearchWidget(
+              widget: Search(
                 text: 'Fast coffee',
               ),
             ),

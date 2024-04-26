@@ -16,7 +16,7 @@ class RegisterScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            AppNameTextWidget(
+            nameApp(
               scale: 7,
             ),
             const SizedBox(
