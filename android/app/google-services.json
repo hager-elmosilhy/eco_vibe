@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1061435502499",
+    "project_id": "eco-vibe-b061f",
+    "storage_bucket": "eco-vibe-b061f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1061435502499:android:19adaf589d7987522a7416",
+        "android_client_info": {
+          "package_name": "com.example.eco_vibe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbtcIxtQIn5Lfw3vWQCLTZBRJfaREasMQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
