@@ -1,5 +1,4 @@
 import 'package:eco_vibe/Screens/Cart/Widgets/items.dart';
-import 'package:eco_vibe/Screens/Categoreis/Widgets/details_app_bar.dart';
 import 'package:eco_vibe/Widgets/coustom_app_bar.dart';
 import 'package:eco_vibe/Widgets/coustom_text.dart';
 import 'package:flutter/material.dart';

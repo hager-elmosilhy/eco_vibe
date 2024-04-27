@@ -1,4 +1,3 @@
-import 'package:eco_vibe/Screens/BottomNav/bottomNav.dart';
 import 'package:flutter/material.dart';
 
 class coustomAppBar extends StatelessWidget {

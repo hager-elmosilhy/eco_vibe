@@ -124,22 +124,19 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const BottomScreen()));
+
 
                       if (formkey.currentState!.validate()) {
-                        print(emailController.text);
-                        print(passwordController.text);
+
                       }
                       FirebaseAuth.instance
                           .signInWithEmailAndPassword(
                               email: emailController.text,
                               password: passwordController.text)
                           .then((value) {
-                        print(value.user?.email);
-                        print(value.user?.uid);
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                            builder: (context) =>const BottomScreen()));
+
                       });
                     },
                     style: ElevatedButton.styleFrom(

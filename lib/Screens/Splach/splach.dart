@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:eco_vibe/Widgets/app_name.dart';
-import 'package:eco_vibe/Screens/Splach/Widget/background.dart';
 import 'package:flutter/material.dart';
 
 import '../Login/register.dart';
@@ -33,7 +32,13 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return   Scaffold(
       backgroundColor: const Color(0xff00994C),
-      body:      nameApp(scale: 4,),
+      body:      Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          nameApp(scale: 4.5,),
+        ],
+      ),
     );
   }
   @override

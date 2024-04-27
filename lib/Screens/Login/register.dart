@@ -1,6 +1,5 @@
 import 'package:eco_vibe/Screens/Login/Widgets/coustom_container.dart';
 import 'package:eco_vibe/Screens/Login/login.dart';
-import 'package:eco_vibe/Screens/Login/sign_up.dart';
 import 'package:eco_vibe/Widgets/app_name.dart';
 import 'package:eco_vibe/Widgets/coustom_divider.dart';
 import 'package:flutter/material.dart';

@@ -121,21 +121,18 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const LoginScreen()));
+
                       if (formkey.currentState!.validate()) {
-                        print(emailController.text);
-                        print(passwordController.text);
+
                       }
                       FirebaseAuth.instance
                           .createUserWithEmailAndPassword(
                               email: emailController.text,
                               password: passwordController.text)
                           .then((value) {
-                        print(value.user?.email);
-                        print(value.user?.uid);
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                            builder: (context) =>const LoginScreen()));
+
                       });
                     },
                     style: ElevatedButton.styleFrom(
