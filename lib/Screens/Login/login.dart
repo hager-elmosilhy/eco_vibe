@@ -1,11 +1,11 @@
 import 'package:eco_vibe/Screens/BottomNav/bottomNav.dart';
-import 'package:eco_vibe/Screens/Login/Widgets/AuthTextFieldWidget.dart';
 import 'package:eco_vibe/Screens/Login/Widgets/AuthTextWidget.dart';
 import 'package:eco_vibe/Screens/Login/Widgets/auth_textButton_widget.dart';
 import 'package:eco_vibe/Screens/Login/Widgets/coustom_continue.dart';
 import 'package:eco_vibe/Screens/Login/sign_up.dart';
 import 'package:eco_vibe/Widgets/app_name.dart';
 import 'package:eco_vibe/Widgets/coustom_divider.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -16,7 +16,10 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  GlobalKey formState = GlobalKey();
+  var formkey = GlobalKey<FormState>();
+  bool visible = true;
+  var emailController = TextEditingController();
+  var passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -47,23 +50,74 @@ class _LoginScreenState extends State<LoginScreen> {
                   const SizedBox(
                     height: 15,
                   ),
-                  Form(
-                    key: formState,
-                    child: const Column(children: [
-                      AuthTextFieldWidget(
-                        type: 'Full Name',
-                        text: 'Full Name',
-                        color: Color(0xffC4C4C4),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      AuthTextFieldWidget(
-                        type: 'Email or phone',
-                        text: 'Email or phone',
-                        color: Color(0xffC4C4C4),
-                      ),
-                    ]),
+                  SingleChildScrollView(
+                    child: Form(
+                      key: formkey,
+                      child: Column(children: [
+                        TextFormField(
+                          controller: emailController,
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return "Email not be empty";
+                            }
+                            return null;
+                          },
+                          keyboardType: TextInputType.emailAddress,
+                          onFieldSubmitted: (String value) {
+                            print(value);
+                          },
+                          onChanged: (String value) {
+                            print(value);
+                          },
+                          decoration: InputDecoration(
+                            labelStyle: const TextStyle(
+                              fontSize: 16,
+                            ),
+                            hintText: 'Full Name',
+                            filled: true,
+                            fillColor: Colors.white,
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        TextFormField(
+                          controller: passwordController,
+                          keyboardType: TextInputType.visiblePassword,
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return "password not be empty";
+                            }
+                            return null;
+                          },
+                          obscureText: visible,
+                          onFieldSubmitted: (String value) {
+                            print(value);
+                          },
+                          onChanged: (String value) {
+                            print(value);
+                          },
+                          decoration: InputDecoration(
+                            labelStyle: const TextStyle(
+                              fontSize: 16,
+                            ),
+                            hintText: 'password',
+                            filled: true,
+
+                            fillColor: Colors.white,
+                            //focusColor:const Color(0xff00994C),
+                            // hoverColor: const Color(0xff00994C),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(16),
+                              //borderSide: BorderSide.none
+                            ),
+                          ),
+                        ),
+                      ]),
+                    ),
                   ),
                   const SizedBox(
                     height: 40,
@@ -74,6 +128,19 @@ class _LoginScreenState extends State<LoginScreen> {
                           context,
                           MaterialPageRoute(
                               builder: (context) => const BottomScreen()));
+
+                      if (formkey.currentState!.validate()) {
+                        print(emailController.text);
+                        print(passwordController.text);
+                      }
+                      FirebaseAuth.instance
+                          .signInWithEmailAndPassword(
+                              email: emailController.text,
+                              password: passwordController.text)
+                          .then((value) {
+                        print(value.user?.email);
+                        print(value.user?.uid);
+                      });
                     },
                     style: ElevatedButton.styleFrom(
                         minimumSize: const Size(360, 50),
@@ -110,7 +177,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      AuthTextWidget(
+                      const AuthTextWidget(
                         text: 'Do you have an account?',
                         size: 18,
                         fontWeight: FontWeight.normal,
@@ -118,7 +185,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       AuthTextButtonWidget(
                         text: 'Sign Up',
-                        color: Color(0xff00994C),
+                        color: const Color(0xff00994C),
                         size: 18,
                         onPressed: () {
                           Navigator.push(

@@ -37,6 +37,12 @@ dependencies:
   cupertino_icons: ^1.0.6
   rate:
   shimmer: null
+  shared_preferences:
+  webview_flutter:
+  firebase_core:
+  firebase_auth:
+  cloud_firestore:
+  provider:
 
 dev_dependencies:
   flutter_test:
